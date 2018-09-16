@@ -10,16 +10,23 @@
  */
 
 // Your code :
-
+function min(num1, num2){
+    if(num1 < num2){
+        return num1;
+    }
+    else{
+        return num2;
+    }
+}
 //* Begin of tests
-const assert = require('assert')
+const assert = require('assert');
 
-assert.strictEqual(typeof min, 'function')
-assert.strictEqual(min.length, 2)
-assert.strictEqual(min.toString().includes('Math.min'), false)
-assert.notStrictEqual(min, Math.min)
-assert.strictEqual(min(0, -2), -2)
-assert.strictEqual(min(-1, 10), -1)
-assert.strictEqual(min(-13.2, -222), -222)
-assert.strictEqual(min(132, 133), 132)
+assert.strictEqual(typeof min, 'function');
+assert.strictEqual(min.length, 2);
+assert.strictEqual(min.toString().includes('Math.min'), false);
+assert.notStrictEqual(min, Math.min);
+assert.strictEqual(min(0, -2), -2);
+assert.strictEqual(min(-1, 10), -1);
+assert.strictEqual(min(-13.2, -222), -222);
+assert.strictEqual(min(132, 133), 132);
 // End of tests */
