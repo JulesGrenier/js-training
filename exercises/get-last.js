@@ -8,13 +8,21 @@
  */
 
 // Your code :
-
+function getLast(myItem){
+    if(typeof myItem === 'string'){
+        return myItem.charAt(myItem.length - 1);
+    }
+    else if(typeof myItem === 'object'){
+        return myItem[myItem.length - 1];
+    }
+    
+}
 //* Begin of tests
-const assert = require('assert')
+const assert = require('assert');
 
-assert.strictEqual(getLast([ 2, 42 ]), 42)
-assert.strictEqual(getLast([ 'pouet', 4, true ]), true)
-assert.strictEqual(getLast([ getLast ]), getLast)
-assert.strictEqual(getLast('salut'), 't')
-assert.strictEqual(getLast([]), undefined)
+assert.strictEqual(getLast([ 2, 42 ]), 42);
+assert.strictEqual(getLast([ 'pouet', 4, true ]), true);
+assert.strictEqual(getLast([ getLast ]), getLast);
+assert.strictEqual(getLast('salut'), 't');
+assert.strictEqual(getLast([]), undefined);
 // End of tests */

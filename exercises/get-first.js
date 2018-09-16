@@ -8,13 +8,20 @@
  */
 
 // Your code :
-
+function getFirst(myItem){
+    if(typeof myItem === 'string'){
+        return myItem.charAt(0);
+    }
+    else if(typeof myItem === 'object'){
+        return myItem[0];
+    }
+}
 //* Begin of tests
-const assert = require('assert')
+const assert = require('assert');
 
-assert.strictEqual(getFirst([ 2, 42 ]), 2)
-assert.strictEqual(getFirst([ 'pouet', 4, true ]), 'pouet')
-assert.strictEqual(getFirst([ getFirst ]), getFirst)
-assert.strictEqual(getFirst('salut'), 's')
-assert.strictEqual(getFirst([]), undefined)
+assert.strictEqual(getFirst([ 2, 42 ]), 2);
+assert.strictEqual(getFirst([ 'pouet', 4, true ]), 'pouet');
+assert.strictEqual(getFirst([ getFirst ]), getFirst);
+assert.strictEqual(getFirst('salut'), 's');
+assert.strictEqual(getFirst([]), undefined);
 // End of tests */
