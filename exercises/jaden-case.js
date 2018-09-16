@@ -10,10 +10,16 @@
  *
  */
 
-
+function jadenCase(str){
+    return str.split(' ').map(function(str){
+        return str.replace(str.charAt(0), str.charAt(0).toUpperCase())
+    }).join(' ')
+}
 
 //* Begin of tests
-const assert = require('assert')
+const assert = require('assert');
 
-assert.fail('You must write your own tests')
+assert.strictEqual(typeof jadenCase, 'function');
+assert.strictEqual(jadenCase.length, 1);
+assert.strictEqual(jadenCase("How can mirrors be real if our eyes aren't real"), "How Can Mirrors Be Real If Our Eyes Aren't Real");
 // End of tests */
