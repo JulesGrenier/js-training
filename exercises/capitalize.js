@@ -7,13 +7,19 @@
  *
  */
 
+function capitalize(str){
+    let firstLetter = str.charAt(0).toUpperCase();
+    let restStr = str.slice(1).toLowerCase();
+    return firstLetter + restStr;
+
+}
 
 //* Begin of tests
-const assert = require('assert')
+const assert = require('assert');
 
-assert.strictEqual(typeof capitalize, "function")
-assert.strictEqual(capitalize('str'), 'Str')
-assert.strictEqual(capitalize('qsdqsdqsd'), 'Qsdqsdqsd')
-assert.strictEqual(capitalize('STR'), 'Str')
-assert.strictEqual(capitalize('zapZAP'), 'Zapzap')
+assert.strictEqual(typeof capitalize, "function");
+assert.strictEqual(capitalize('str'), 'Str');
+assert.strictEqual(capitalize('qsdqsdqsd'), 'Qsdqsdqsd');
+assert.strictEqual(capitalize('STR'), 'Str');
+assert.strictEqual(capitalize('zapZAP'), 'Zapzap');
 // End of tests */
